@@ -1,0 +1,93 @@
+article {
+    margin-top: 0;
+}
+
+.narrow {
+    max-width: 75%;
+}
+
+nav li > * {
+    margin-bottom: 0.4em;
+    display: inline;
+    padding: 0 var(--nav-element-spacing-horizontal);
+}
+
+nav li > a {
+    display:contents;
+}
+
+div[role="document"] section a[href*="//"]:not([href*="https://agnidasein.com"], [role])::after {
+    display: contents;
+	width: 1rem;
+	height: 1rem;
+}
+
+body > nav ul:first-of-type li:nth-of-type(2) {
+    margin-left: -1.5em;
+}
+
+body > nav {
+    -webkit-backdrop-filter: unset;
+    background-color: unset;
+    box-shadow: unset;
+    backdrop-filter: unset;
+}
+
+main > aside details summary {
+    color: var(--h1-color);
+    font-weight: 700;
+    font-size: 16px;
+    /*text-transform: uppercase;*/
+}
+
+main > aside nav {
+    padding-top: calc(var(--block-spacing-vertical) * 0.8);
+    padding-bottom: var(--block-spacing-vertical);
+}
+
+main > aside li, main > aside summary {
+	font-size: 18px;
+    line-height: 2.0;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+td, th {
+    border-bottom: unset;
+}
+
+ul > p {
+    line-height: 2.0;
+}
+
+:root {
+    --primary: hsl(205deg, 30%, 15%);
+    --icon-external: none;
+}
+
+.nav-logo {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: -50px;
+}
+
+@media (max-width: 768px) {
+    .narrow {
+        max-width: 100%;
+    }
+    .nav-logo {
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-bottom: 0px;
+    }
+    main > aside nav {
+        padding-top: calc(var(--block-spacing-vertical) * 0.8);
+        padding-bottom: var(--block-spacing-vertical);
+    }
+}
+
+.container-fluid {
+    z-index: 0;
+}

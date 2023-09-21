@@ -1,0 +1,66 @@
+.switcher{position:fixed;right:calc(var(--spacing)/ 2 + var(--scrollbar-width,0px));bottom:var(--spacing);width:auto;margin-bottom:0;padding:.75rem;border-radius:2rem;box-shadow:var(--card-box-shadow);line-height:1;text-align:right}.switcher::after{display:inline-block;width:1rem;height:1rem;border:.15rem solid currentColor;border-radius:50%;background:linear-gradient(to right,currentColor 0,currentColor 50%,transparent 50%);content:"";vertical-align:bottom;transition:transform var(--transition)}.switcher i{display:inline-block;max-width:0;padding:0;overflow:hidden;font-style:normal;font-size:.875rem;white-space:nowrap}.switcher:focus,.switcher:hover{max-width:100%;transition:background-color var(--transition),border-color var(--transition),color var(--transition),box-shadow var(--transition)}.switcher:hover::after{transform:rotate(180deg)}.switcher:hover i{max-width:100%;padding:0 calc(var(--spacing)/ 2) 0 calc(var(--spacing)/ 4);transition:max-width var(--transition),padding var(--transition)}.switcher:focus{box-shadow:var(--card-box-shadow),0 0 0 .2rem var(--secondary-focus)}@media (min-width:576px){.switcher{right:calc(var(--spacing) + var(--scrollbar-width,0px))}}
+
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --background-color: #DDDBD9;
+}
+
+/* Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background-color: #1D1E1F;
+    --card-background-color: #202123;
+    --card-sectionning-background-color: #262728;
+  }
+}
+
+/* Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --background-color: #1D1E1F;
+  --card-background-color: #202123;
+  --card-sectionning-background-color: #262728;
+}
+
+/* Common styles */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+  --icon-external: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(115, 130, 140)' opacity='0.66' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
+}
+
+.external-link::after {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    /*background-image: var(--icon-external);*/
+    background-position: top center;
+    background-size: .66rem auto;
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.background {
+    background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="-90 150 488 363" height="8000px"><polygon fill="currentColor" fill-opacity="0.1" transform="translate(109.337838, 229.000000) translate(-109.337838, -229.000000)" points="109.337838 136 218.675676 322 0 322"></polygon></svg>');
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+@media (min-width: 1200px) {
+    .hero {
+      margin-left: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+  h3, li {
+    font-size: 1.8rem;
+  }
+}
