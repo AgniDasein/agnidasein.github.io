@@ -90,7 +90,7 @@ ul > p {
     background-image: url('../img/hero_pic.png');
     background-position: top 60% right 40%; 
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: 150%;
 }
 @media (max-width: 1024px) {
     .narrow {
@@ -121,8 +121,9 @@ ul > p {
         background-image: url('../img/hero_pic.png');
         background-position: center; 
         background-attachment: fixed;
-        background-size: 220% !important;
+        background-size: 300% !important;
     }
+}
 
 @media (max-width: 768px) {
     .narrow {
@@ -154,5 +155,18 @@ ul > p {
         background-position: center; 
         background-attachment: fixed;
         background-size: 300% !important;
+    }
+}
+
+@media (max-width: 486px) {
+    main > aside nav {
+        padding-top: calc(var(--block-spacing-vertical) * 1.8);
+        padding-bottom: var(--block-spacing-vertical);
+    }
+    .background {
+        background-image: url('../img/hero_pic.png');
+        background-position: center; 
+        background-attachment: fixed;
+        background-size: 400% !important;
     }
 }
