@@ -88,11 +88,11 @@ ul > p {
 
 .background {
     background-image: url('../img/hero_pic.png');
-    background-position: top 60% right 40%; 
+    background-position: center top;/*top 60% right 40%; */
     background-attachment: fixed;
-    background-size: 150%;
+    background-size: 100%;
 }
-@media (max-width: 1024px) {
+@media all and (max-width: 1024px) {
     .narrow {
         max-width: 100%;
     }
@@ -119,13 +119,13 @@ ul > p {
     }
     .background {
         background-image: url('../img/hero_pic.png');
-        background-position: center; 
+        background-position: center top; 
         background-attachment: fixed;
-        background-size: 300% !important;
+        background-size: 100% !important;
     }
 }
 
-@media (max-width: 768px) {
+@media all and (max-width: 1200px) {
     .narrow {
         max-width: 100%;
     }
@@ -152,20 +152,20 @@ ul > p {
     }
     .background {
         background-image: url('../img/hero_pic.png');
-        background-position: center; 
+        background-position: center top; 
         background-attachment: fixed;
         background-size: 300% !important;
     }
 }
 
-@media (max-width: 486px) {
+@media all and (max-width: 786px) {
     main > aside nav {
         padding-top: calc(var(--block-spacing-vertical) * 1.8);
         padding-bottom: var(--block-spacing-vertical);
     }
     .background {
         background-image: url('../img/hero_pic.png');
-        background-position: center; 
+        background-position: center top; 
         background-attachment: fixed;
         background-size: 400% !important;
     }
