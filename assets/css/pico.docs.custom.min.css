@@ -6,6 +6,10 @@ article {
     max-width: 75%;
 }
 
+.secondary {
+    text-decoration: none;
+}
+
 nav li > * {
     margin-bottom: 0.4em;
     display: inline;
