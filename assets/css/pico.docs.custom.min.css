@@ -165,7 +165,7 @@ ul > p {
     }
     .background {
         background-image: url('../img/hero_pic.png');
-        background-position: center top; 
+        background-position: right 40% top; 
         background-attachment: fixed;
         background-size: 400% !important;
     }
